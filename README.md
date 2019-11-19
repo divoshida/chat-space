@@ -16,7 +16,7 @@ has_many :users, through: :groups_users
 
 
 ### groupsテーブル
-
+1
 | column  | type       | options                        |
 |---------|------------|--------------------------------|
 | name    | string     | null: false                    |
