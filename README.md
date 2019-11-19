@@ -16,12 +16,11 @@ has_many :users, through: :groups_users
 
 
 ### groupsテーブル
-1
+
 | column  | type       | options                        |
 |---------|------------|--------------------------------|
 | name    | string     | null: false                    |
-| user_id | integer    | null: false, foregin_key: true |
-
+| user_id | references | null: false, foregin_key: true |
 #### Assosiation
 has_many :messages  
 has_many :users, through: :groups_users
