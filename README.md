@@ -1,6 +1,5 @@
 # README
 
-
 ## ChatSpaceDB設計
 
 ### usersテーブル
@@ -21,7 +20,7 @@ has_many :users, through: :groups_users
 | column  | type       | options                        |
 |---------|------------|--------------------------------|
 | name    | string     | null: false                    |
-| user_id | references | null: false, foregin_key: true |
+| user_id | integer    | null: false, foregin_key: true |
 
 #### Assosiation
 has_many :messages  
@@ -32,8 +31,8 @@ has_many :users, through: :groups_users
 
 | column   | type       | options                        |
 |----------|------------|--------------------------------|
-| user_id  | references | null: false, foregin_key: true |
-| group_id | references | null: false, foregin_key: true |
+| user_id  | integer    | null: false, foregin_key: true |
+| group_id | integer    | null: false, foregin_key: true |
 
 #### Assosiation
 belongs_to :users  
@@ -46,8 +45,8 @@ belongs_to :groups
 |----------|------------|--------------------------------|
 | body     | text       | null: false                    |
 | image    | string     | null: false                    |
-| group_id | references | null: false, foregin_key: true |
-| user_id  | references | null: false, foregin_key: true |
+| group_id | integer    | null: false, foregin_key: true |
+| user_id  | integer    | null: false, foregin_key: true |
 
 #### Assosiation
 belongs_to :user  
