@@ -1,24 +1,52 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## ChatSpaceDB設計
 
-Things you may want to cover:
+### usersテーブル
 
-* Ruby version
+| column   | type   | options     |
+|----------|--------|-------------|
+| name     | string | null: false |
+| email    | string | null: false |
+| password | string | null: false |
 
-* System dependencies
+#### Assosiation
+has_many :messages  
+has_many :users, through: :groups_users
 
-* Configuration
 
-* Database creation
+### groupsテーブル
 
-* Database initialization
+| column  | type       | options                        |
+|---------|------------|--------------------------------|
+| name    | string     | null: false                    |
+| user_id | references | null: false, foregin_key: true |
+#### Assosiation
+has_many :messages  
+has_many :users, through: :groups_users
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+### users_groupsテーブル
 
-* Deployment instructions
+| column   | type       | options                        |
+|----------|------------|--------------------------------|
+| user_id  | integer    | null: false, foregin_key: true |
+| group_id | integer    | null: false, foregin_key: true |
 
-* ...
+#### Assosiation
+belongs_to :users  
+belongs_to :groups
+
+
+### messagesテーブル
+
+| column   | type       | options                        |
+|----------|------------|--------------------------------|
+| body     | text       | null: false                    |
+| image    | string     | null: false                    |
+| group_id | integer    | null: false, foregin_key: true |
+| user_id  | integer    | null: false, foregin_key: true |
+
+#### Assosiation
+belongs_to :user  
+belongs_to :group
