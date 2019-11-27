@@ -1,0 +1,29 @@
+.main
+  .main-header
+    .main-header__left
+      group_name
+      .main-header__left-bottom
+        Member：
+    .main-header__edit
+      = link_to "#" do
+        Edit
+
+  .main-message
+    .main-content
+      .main-message__upper
+        member
+        .main-message__date
+          2019/11/21(Thu) 17:08:10
+      .main-message__body
+        body
+  
+  .main-bottom
+    .form
+      .input-form
+        %input.textarea{:name => "email", :placeholder => "type a message", :type => "email", :value => ""}/
+        .filesend
+          %label
+            %i.far.fa-image
+            %input#fileselect{:name => "datafile", :type => "file"}/
+      .send-btn
+        %p Send

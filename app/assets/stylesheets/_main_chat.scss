@@ -1,0 +1,120 @@
+.main{
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.main-header{  
+  height: 100px;
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  &__left{
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    &-bottom{
+      color: #999999;
+      font-size: 12px;
+      margin-top: 15px;
+    }
+  }
+  &__edit{
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    margin-top: 30px;
+    color: #38aef0;
+    border: solid 1px #38aef0;
+    position: absolute;
+    right: 40px;
+    & :link{
+      display: block;
+      text-decoration: none;
+      color: #38aef0;
+    }
+    & :visited{
+      display: block;
+      text-decoration: none;
+      color: #38aef0;
+    }
+  }
+}
+
+.main-message{
+  height: calc(100vh - 101px - 40px - 90px);
+  background-color: #fafafa;
+  padding: 46px 40px;
+  font-size: 16px;
+  &__upper{
+    display: flex;
+    font-weight: bold;
+    color: #434A54;
+  }
+  &__date{
+    color: #999999;
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 10px;
+  }
+  &__body{
+    margin-top: 10px;
+    font-size: 14px;
+    color: #434A54;
+  }
+}
+
+.main-bottom{
+  position: absolute;
+  bottom: 0;
+  background-color: #DDD;
+  height: 50px;
+  width: calc(100% - 80px);
+  padding: 20px 40px;
+  .form{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+      .input-form{
+        background-color: #fff;
+        height: 50px;
+        width: 100%;
+        border-style: none;
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        position: relative;
+      }
+      .textarea{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin: auto 0;
+        margin-left: 10px;
+        color: #434a54;
+        border: none;
+        height: 100%;
+        width: 100%;
+      }
+      .filesend{
+        margin: auto 0;
+        margin-right: 10px;
+        font-size: 25px;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        #fileselect{ display: none; }
+      }
+      .send-btn{
+        height: 50px;
+        width: 40px;
+        background-color: #38aef0;
+        color: #fff;
+        padding: 0 30px;
+        margin-left: 15px;
+        text-align: center;
+        line-height: 50px;
+      }
+  }
+}
+
