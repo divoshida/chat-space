@@ -1,0 +1,19 @@
+.chat-side
+  .side-header
+    .side-header__userName
+      user_name
+    .side-header__menu
+      .side-header__menu-icon
+        = link_to "#" do
+          = icon('far', 'edit')
+          %span<>
+        = link_to "#" do
+          = icon('fas', 'cog')
+
+  .side-groups
+    .side-groups__group
+      = link_to "#" do
+        belonging_group
+      .side-groups__group-latest_message
+        = link_to "#" do
+          message_from_group
